@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="linchange.example.com.supergreattest">
+
+    <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许读取手机状态 用于创建BmobInstallation -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许读取日志 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 允许录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许改变网络状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 允许读取联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 接收短信权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 窗口提示权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 发送短信权限 -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- 读取设置 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 改变wifi状态 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 得到任务 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 写入设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 基本定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- sd卡读取权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- application中增加name属性可替换默认的application成自定义的 -->
+    <application
+        android:name=".application.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/app_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- 启动页 -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:theme="@style/NoActionBarFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 主页 -->
+        <activity android:name=".MainActivity" />
+
+        <!-- 设置 -->
+        <activity
+            android:name=".ui.SettingActivity"
+            android:label="@string/text_setting" />
+
+        <!-- 引导页 -->
+        <activity
+            android:name=".ui.GuideActivity"
+            android:theme="@style/NoActionBarFullscreen" />
+
+        <!-- 登录页 -->
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/text_login" />
+
+        <!-- 注册页 -->
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:label="@string/text_register" />
+
+        <!-- 忘记或重置密码 -->
+        <activity
+            android:name=".ui.ForgetPasswordActivity"
+            android:label="@string/forget_password" />
+
+        <!-- 物流查询界面 -->
+        <activity
+            android:name=".ui.CourierActivity"
+            android:label="@string/courier_search" />
+
+        <!-- 归属地查询界面 -->
+        <activity
+            android:name=".ui.PhoneActivity"
+            android:label="@string/place_belong_search" />
+
+        <!-- 微信新闻详情界面 -->
+        <activity android:name=".ui.WebViewActivity" />
+
+        <!-- 短信服务 -->
+        <service android:name=".service.SmsService" />
+
+        <!-- 下载界面 -->
+        <activity
+            android:name=".ui.UpdateActivity"
+            android:label="@string/download_update" />
+
+        <!-- 生成二维码界面 -->
+        <activity
+            android:name=".ui.QrCodeActivity"
+            android:label="@string/my_qr_code" />
+
+        <!-- 我的位置界面 -->
+        <activity
+            android:name=".ui.LocationActivity"
+            android:label="@string/my_locate" />
+
+        <!--关于软件界面-->
+        <activity android:name=".ui.AboutActivity"
+            android:label="@string/about_app" />
+
+        <!-- 百度地图配置 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="sm65SMp7BDGP0o6Wjm5T7nFUftsQ1XEG" />
+
+        <!-- 百度定位服务 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_forget_password"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="linchange.example.com.supergreattest.ui.ForgetPasswordActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset_psw"
+        android:textColor="#78bae2"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/et_pass_old"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/old_psw" />
+
+    <EditText
+        android:id="@+id/et_pass_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/new_psw" />
+
+    <EditText
+        android:id="@+id/et_password_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/psw_again" />
+
+    <Button
+        android:id="@+id/btn_update_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/change_password"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/forget_password"
+        android:textColor="#78bae2"
+        android:textSize="22sp" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/text_email"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btn_by_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:text="@string/through_email"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

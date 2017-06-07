@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/mChatListView"
+        android:layout_width="match_parent"
+        android:divider="@null"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_text"
+            android:hint="@string/enter_your_problem"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:textColor="@android:color/white"
+            android:layout_margin="5dp"
+            android:text="@string/text_send"
+            android:background="@drawable/btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_left"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="左边" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_right"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="右边" />-->
+
+    </LinearLayout>
+
+</LinearLayout>
